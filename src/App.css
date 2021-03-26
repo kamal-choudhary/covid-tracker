@@ -1,38 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f6fa;
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  gap: 2rem;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.app__left {
+  flex-grow: 9;
+  margin-left: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.app__right {
+  flex-grow: 1;
+  border: 1px solid rgb(192, 192, 192);
+  padding: 10px;
+  margin-right: 1rem;
+}
+
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.app__dropdown {
+  background-color: white;
+  width: 200px;
+}
+
+.app__header > h1 {
+  color: #fc3c3c;
+  font-size: 2.5rem;
+}
+
+.app__stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.app__map-container {
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 990px) {
+  .App {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .app__stats {
+    flex-direction: column;
+  }
+  .app__right {
+    margin-right: 0;
+    width: 87%;
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 450px) {
+  .App {
+    flex-direction: column;
+  }
+  .app__stats {
+    flex-direction: column;
+  }
+  .app__header {
+    flex-direction: column;
+  }
+  .app__dropdown {
+    width: 95%;
+  }
+  .app__right {
+    margin-right: 0;
+    width: 80%;
+    margin-left: 8%;
   }
 }

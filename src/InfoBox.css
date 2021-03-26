@@ -1,0 +1,41 @@
+.infoBox__card {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px;
+  width: 300px;
+  cursor: pointer;
+}
+
+.active {
+  border-top: 10px solid #cc1034;
+}
+
+.active-green {
+  border-top: 10px solid #7dd71d;
+}
+
+.infoBox__heading {
+  font-weight: bold;
+  color: gray;
+}
+
+.infoBox__big__number {
+  font-size: 40px;
+  color: #cc1034;
+  margin-top: 5px;
+}
+
+.green {
+  color: #7dd71d;
+}
+
+.infoBox__total {
+  margin-top: 5px;
+  color: gray;
+}
+
+@media (max-width: 990px) {
+  .infoBox__card {
+    width: 95%;
+  }
+}
